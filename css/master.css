@@ -50,6 +50,10 @@ button {
     display: block;
 }
 
+.d-none {
+    display: none;
+}
+
 
 body {
     height: 100vh;

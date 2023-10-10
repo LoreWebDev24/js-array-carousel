@@ -29,7 +29,10 @@ firstImageDOMElement.classList.add('active')
 
 
 document.querySelector(".button-a").addEventListener("click", function() {
-    
+    let firstImageDOMElement = imageDOMElements[0]
+    firstImageDOMElement.classList.remove('active')
+    let secondImageDOMElement = imageDOMElements[1]
+    secondImageDOMElement.classList.add('active')
   });
 
 
