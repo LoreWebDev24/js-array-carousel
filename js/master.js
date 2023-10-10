@@ -23,3 +23,13 @@ for (let i = 0; i < srcImagesArray.length; i++ ) {
 
 let imageDOMElement = document.querySelectorAll('.image')
 console.log(imageDOMElement)
+
+
+document.querySelector(".button-a").addEventListener("click", function() {
+    
+  });
+
+
+document.querySelector(".button-b").addEventListener("click", function() {
+    
+  });
