@@ -30,13 +30,13 @@ button {
     cursor: pointer;
 }
 
-.button-a {
+.button-backward {
     position:absolute;
     top: 50% ;
     left: 5%;
 }
 
-.button-b {
+.button-forward {
     position:absolute;
     top: 50% ;
     right: 5%;

@@ -7,6 +7,7 @@ let containerDOMElement = document.querySelector('.container-big')
 
 console.log(containerDOMElement)
 
+let indexCurrentImage = 0;
 
 for (let i = 0; i < srcImagesArray.length; i++ ) {
     let currentSrc = srcImagesArray[i] ;
@@ -24,18 +25,59 @@ for (let i = 0; i < srcImagesArray.length; i++ ) {
 let imageDOMElements = document.querySelectorAll('.image')
 console.log(imageDOMElements)
 
-let firstImageDOMElement = imageDOMElements[0]
-firstImageDOMElement.classList.add('active')
+let currentImageDOMElement = imageDOMElements[0]
+currentImageDOMElement.classList.add('active')
 
 
-document.querySelector(".button-a").addEventListener("click", function() {
-    let firstImageDOMElement = imageDOMElements[0]
-    firstImageDOMElement.classList.remove('active')
-    let secondImageDOMElement = imageDOMElements[1]
-    secondImageDOMElement.classList.add('active')
+document.querySelector(".button-backward").addEventListener("click", function() {
+   
+  
+    let currentImageDOMElement = imageDOMElements[indexCurrentImage]
+    currentImageDOMElement.classList.remove('active')
+
+
+    indexCurrentImage--;
+
+    if (indexCurrentImage < 0){
+        indexCurrentImage = srcImagesArray.length-1
+        console.log(indexCurrentImage)
+    }
+
+
+    let nextImageDOMElement = imageDOMElements[indexCurrentImage]
+    nextImageDOMElement.classList.add('active')
   });
 
 
-document.querySelector(".button-b").addEventListener("click", function() {
+document.querySelector(".button-forward").addEventListener("click", function() {
+   
+  
+    let currentImageDOMElement = imageDOMElements[indexCurrentImage]
+    currentImageDOMElement.classList.remove('active')
+
+
+    indexCurrentImage++;
     
+    if (indexCurrentImage > (srcImagesArray.length)-1){
+        indexCurrentImage = 0   
+    }
+
+
+    let nextImageDOMElement = imageDOMElements[indexCurrentImage]
+    nextImageDOMElement.classList.add('active')
+
+    
+
+    
+
+   
+ 
+    
+   
+
+ 
+    
+ 
+
+
   });
