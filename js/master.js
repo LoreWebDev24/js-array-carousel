@@ -21,8 +21,11 @@ for (let i = 0; i < srcImagesArray.length; i++ ) {
     containerDOMElement.innerHTML += htmlString
 }
 
-let imageDOMElement = document.querySelectorAll('.image')
-console.log(imageDOMElement)
+let imageDOMElements = document.querySelectorAll('.image')
+console.log(imageDOMElements)
+
+let firstImageDOMElement = imageDOMElements[0]
+firstImageDOMElement.classList.add('active')
 
 
 document.querySelector(".button-a").addEventListener("click", function() {
