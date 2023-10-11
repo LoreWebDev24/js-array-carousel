@@ -20,12 +20,15 @@ for (let i = 0; i < srcImagesArray.length; i++ ) {
     `
 
     containerDOMElement.innerHTML += htmlString
+    
 }
+
+
 
 let imageDOMElements = document.querySelectorAll('.image')
 console.log(imageDOMElements)
 
-let currentImageDOMElement = imageDOMElements[0]
+let currentImageDOMElement = imageDOMElements[indexCurrentImage]
 currentImageDOMElement.classList.add('active')
 
 
@@ -66,18 +69,5 @@ document.querySelector(".button-forward").addEventListener("click", function() {
     let nextImageDOMElement = imageDOMElements[indexCurrentImage]
     nextImageDOMElement.classList.add('active')
 
-    
-
-    
-
-   
- 
-    
-   
-
- 
-    
- 
-
-
   });
+
