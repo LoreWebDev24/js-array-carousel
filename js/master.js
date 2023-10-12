@@ -9,6 +9,8 @@ console.log(containerDOMElement)
 
 let indexCurrentImage = 0;
 
+let containerPrewDOMElement = document.querySelector('.container-prew')
+
 for (let i = 0; i < srcImagesArray.length; i++ ) {
     let currentSrc = srcImagesArray[i] ;
     console.log(currentSrc)
@@ -18,11 +20,16 @@ for (let i = 0; i < srcImagesArray.length; i++ ) {
         <img src="${currentSrc}">
     </div>
     `
-
-    containerDOMElement.innerHTML += htmlString
     
-}
+    let htmlThumb = `
+    <div class="thumbs"> 
+        <img src="${currentSrc}">
+    </div>
+    `
+    containerPrewDOMElement.innerHTML += htmlThumb
+    containerDOMElement.innerHTML += htmlString
 
+}
 
 
 let imageDOMElements = document.querySelectorAll('.image')
@@ -47,8 +54,8 @@ document.querySelector(".button-backward").addEventListener("click", function() 
     }
 
 
-    let nextImageDOMElement = imageDOMElements[indexCurrentImage]
-    nextImageDOMElement.classList.add('active')
+    let prevImageDOMElement = imageDOMElements[indexCurrentImage]
+    prevImageDOMElement.classList.add('active')
   });
 
 
@@ -70,4 +77,6 @@ document.querySelector(".button-forward").addEventListener("click", function() {
     nextImageDOMElement.classList.add('active')
 
   });
+
+
 
